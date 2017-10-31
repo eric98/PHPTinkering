@@ -12,19 +12,14 @@
 <ul>
     <?php foreach ($tasks as $task) : ?>
         <li>
-            <?= $task->name ?>
-            <?php
-            if ($tasks->completed) {
-                echo "<span class ="icon"&#9989"</span>
-            } else {
-            
-            }
-            
-//            Operador ternari
-            <strong>Status: <?= $task->completed ?
-            
-            ?>
+            <?php if ($task->completed): ?>
+                <ul><s><?= $task->name; ?></s> <strong>Status: <?= $task->completed ? 'Complete' : 'Incomplete' ?></strong></ul>
+            <?php else: ?>
+                <ul><?= $task->name; ?></ul>
+            <?php endif ?>
         </li>
+
+    <?php endforeach;?>
     <?php endforeach;?>
 
 </ul>
