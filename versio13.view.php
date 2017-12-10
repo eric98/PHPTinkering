@@ -18,10 +18,7 @@
                 <ul><?= $task->name; ?></ul>
             <?php endif ?>
         </li>
-
     <?php endforeach;?>
-    <?php endforeach;?>
-
 </ul>
 
 </body>
